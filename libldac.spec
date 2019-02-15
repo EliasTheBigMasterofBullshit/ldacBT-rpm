@@ -3,12 +3,15 @@
 
 Name:           libldac
 Version:        %{sonamebase}.0.2.2
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        A lossy audio codec for Bluetooth connections
 
 License:        ASL 2.0
 URL:            https://github.com/EHfive/ldacBT
 Source0:        %{url}/releases/download/v%{version}/%{archivename}-%{version}.tar.gz
+
+# Upstream source throws error in a big-endian arch, see #1677491
+ExcludeArch:    s390x
 
 BuildRequires:  cmake3
 BuildRequires:  gcc
@@ -59,6 +62,9 @@ developing applications that use %{name}.
 %{_libdir}/libldacBT_enc.so
 
 %changelog
+* Fri Feb 15 2019 Gergely Gombos <gombosg@gmail.com> - 2.0.2.2-4
+- Add s390x ExcludeArch
+
 * Thu Feb 7 2019 Gergely Gombos <gombosg@gmail.com> - 2.0.2.2-3
 - Minor fixes before Fedora submission
 
