@@ -2,8 +2,8 @@
 %global sonamebase 2
 
 Name:           libldac
-Version:        %{sonamebase}.0.2.2
-Release:        4%{?dist}
+Version:        %{sonamebase}.0.2.3
+Release:        1%{?dist}
 Summary:        A lossy audio codec for Bluetooth connections
 
 License:        ASL 2.0
@@ -62,6 +62,9 @@ developing applications that use %{name}.
 %{_libdir}/libldacBT_enc.so
 
 %changelog
+* Fri Feb 19 2019 Gergely Gombos <gombosg@gmail.com> - 2.0.2.3-1
+- Bump to 2.0.2.3, upgrade .gitignore
+
 * Fri Feb 15 2019 Gergely Gombos <gombosg@gmail.com> - 2.0.2.2-4
 - Add s390x ExcludeArch
 
