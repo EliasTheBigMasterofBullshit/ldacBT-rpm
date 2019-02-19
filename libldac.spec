@@ -3,7 +3,7 @@
 
 Name:           libldac
 Version:        %{sonamebase}.0.2.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A lossy audio codec for Bluetooth connections
 
 License:        ASL 2.0
@@ -62,7 +62,10 @@ developing applications that use %{name}.
 %{_libdir}/libldacBT_enc.so
 
 %changelog
-* Fri Feb 19 2019 Gergely Gombos <gombosg@gmail.com> - 2.0.2.3-1
+* Tue Feb 19 2019 Gergely Gombos <gombosg@gmail.com> - 2.0.2.3-2
+- Fixed changelog
+
+* Tue Feb 19 2019 Gergely Gombos <gombosg@gmail.com> - 2.0.2.3-1
 - Bump to 2.0.2.3, upgrade .gitignore
 
 * Fri Feb 15 2019 Gergely Gombos <gombosg@gmail.com> - 2.0.2.2-4
