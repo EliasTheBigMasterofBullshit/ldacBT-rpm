@@ -3,7 +3,7 @@
 
 Name:           libldac
 Version:        %{sonamebase}.0.2.3
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        A lossy audio codec for Bluetooth connections
 
 License:        ASL 2.0
@@ -51,6 +51,8 @@ developing applications that use %{name}.
 %{_libdir}/libldacBT_abr.so.%{sonamebase}.*
 %{_libdir}/libldacBT_enc.so.%{sonamebase}
 %{_libdir}/libldacBT_enc.so.%{sonamebase}.*
+%{_libdir}/libldacBT_abr.so
+%{_libdir}/libldacBT_enc.so
 
 %files devel
 %dir %{_includedir}/ldac
@@ -58,10 +60,11 @@ developing applications that use %{name}.
 %{_includedir}/ldac/ldacBT.h
 %{_libdir}/pkgconfig/ldacBT-abr.pc
 %{_libdir}/pkgconfig/ldacBT-enc.pc
-%{_libdir}/libldacBT_abr.so
-%{_libdir}/libldacBT_enc.so
 
 %changelog
+* Mon Apr 8 2019 Gergely Gombos <gombosg@gmail.com> - 2.0.2.3-3
+- Move unversioned symlinks to the base package. Linked packages dynamically load (dlopen) this module with the name libldacBT_enc.so.
+
 * Tue Feb 19 2019 Gergely Gombos <gombosg@gmail.com> - 2.0.2.3-2
 - Fixed changelog
 
