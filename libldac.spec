@@ -3,7 +3,7 @@
 
 Name:           libldac
 Version:        %{sonamebase}.0.2.3
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        A lossy audio codec for Bluetooth connections
 
 License:        ASL 2.0
@@ -62,6 +62,9 @@ developing applications that use %{name}.
 %{_libdir}/pkgconfig/ldacBT-enc.pc
 
 %changelog
+* Thu Jul 25 2019 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.2.3-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
 * Mon Apr 8 2019 Gergely Gombos <gombosg@gmail.com> - 2.0.2.3-3
 - Move unversioned symlinks to the base package. Linked packages dynamically load (dlopen) this module with the name libldacBT_enc.so.
 
