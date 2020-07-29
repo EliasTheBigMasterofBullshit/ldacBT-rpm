@@ -64,7 +64,7 @@ developing applications that use %{name}.
 %{_libdir}/pkgconfig/ldacBT-enc.pc
 
 %changelog
-* Thu Jul 29 2020 Gergely Gombos <gombosg@disroot.org> - 2.0.2.3-7
+* Wed Jul 29 2020 Gergely Gombos <gombosg@disroot.org> - 2.0.2.3-7
 - Fix cmake out-of-source FTBFS for F33/rawhide
 
 * Tue Jul 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.2.3-6
