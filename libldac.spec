@@ -1,9 +1,12 @@
+# Force out of source build
+%undefine __cmake_in_source_build
+
 %global archivename ldacBT
 %global sonamebase 2
 
 Name:           libldac
 Version:        %{sonamebase}.0.2.3
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        A lossy audio codec for Bluetooth connections
 
 License:        ASL 2.0
@@ -33,15 +36,14 @@ developing applications that use %{name}.
 %autosetup -n %{archivename}
 
 %build
-%{cmake3} \
+%cmake3 \
     -DLDAC_SOFT_FLOAT=OFF \
-    -DINSTALL_LIBDIR=%{_libdir} \
-    ./
+    -DINSTALL_LIBDIR=%{_libdir}
 
-%make_build
+%cmake3_build
 
 %install
-%make_install
+%cmake3_install
 
 %ldconfig_scriptlets
 
@@ -62,6 +64,9 @@ developing applications that use %{name}.
 %{_libdir}/pkgconfig/ldacBT-enc.pc
 
 %changelog
+* Tue Jul 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.2.3-7
+- Fix cmake out-of-source FTBFS for F33/rawhide
+
 * Tue Jul 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.2.3-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
 
