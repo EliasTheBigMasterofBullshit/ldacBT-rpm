@@ -5,13 +5,13 @@
 %global sonamebase 2
 
 Name:           libldac
-Version:        %{sonamebase}.0.2.3
-Release:        19%{?dist}
+Version:        %{sonamebase}.2.0.3
+Release:        1%{?dist}
 Summary:        A lossy audio codec for Bluetooth connections
 
 License:        Apache-2.0
 URL:            https://github.com/EHfive/ldacBT
-Source0:        %{url}/releases/download/v%{version}/%{archivename}-%{version}.tar.gz
+Source0:        https://github.com/EliasTheBigMasterofBullshit/ldacBT/releases/download/workflow_2/libldac-2.0.3.tar.gz
 
 # Upstream source throws error in a big-endian arch, see #1677491
 ExcludeArch:    s390x
@@ -38,7 +38,8 @@ developing applications that use %{name}.
 %build
 %cmake3 \
     -DLDAC_SOFT_FLOAT=OFF \
-    -DINSTALL_LIBDIR=%{_libdir}
+    -DINSTALL_LIBDIR=%{_libdir} \
+    -DAPPLY_PATCHES=TRUE
 
 %cmake3_build
 
@@ -53,8 +54,10 @@ developing applications that use %{name}.
 %{_libdir}/libldacBT_abr.so.%{sonamebase}.*
 %{_libdir}/libldacBT_enc.so.%{sonamebase}
 %{_libdir}/libldacBT_enc.so.%{sonamebase}.*
+%{_libdir}/libldacBT_dec.so.%{sonamebase}.*
 %{_libdir}/libldacBT_abr.so
 %{_libdir}/libldacBT_enc.so
+%{_libdir}/libldacBT_dec.so
 
 %files devel
 %dir %{_includedir}/ldac
@@ -62,8 +65,12 @@ developing applications that use %{name}.
 %{_includedir}/ldac/ldacBT.h
 %{_libdir}/pkgconfig/ldacBT-abr.pc
 %{_libdir}/pkgconfig/ldacBT-enc.pc
+%{_libdir}/pkgconfig/ldacBT-dec.pc
 
 %changelog
+* Wednesday May 16 2026 EliasOfWaffle <eliascontato@protonmail.com> - 2.0.3-1
+- Temporary move to EliasBigMasterofBullshit/ldacBT fork
+
 * Fri Jan 16 2026 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.2.3-19
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_44_Mass_Rebuild
 
