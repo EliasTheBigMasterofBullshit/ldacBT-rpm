@@ -1,5 +1,6 @@
 # Force out of source build
 %undefine __cmake_in_source_build
+%define _disable_source_fetch
 
 %global archivename ldacBT
 %global sonamebase 2
@@ -63,6 +64,7 @@ developing applications that use %{name}.
 %dir %{_includedir}/ldac
 %{_includedir}/ldac/ldacBT_abr.h
 %{_includedir}/ldac/ldacBT.h
+%{_includedir}/ldac/libldacBT_dec.h
 %{_libdir}/pkgconfig/ldacBT-abr.pc
 %{_libdir}/pkgconfig/ldacBT-enc.pc
 %{_libdir}/pkgconfig/ldacBT-dec.pc
