@@ -55,6 +55,7 @@ developing applications that use %{name}.
 %{_libdir}/libldacBT_abr.so.%{sonamebase}.*
 %{_libdir}/libldacBT_enc.so.%{sonamebase}
 %{_libdir}/libldacBT_enc.so.%{sonamebase}.*
+%{_libdir}/libldacBT_dec.so.%{sonamebase}
 %{_libdir}/libldacBT_dec.so.%{sonamebase}.*
 %{_libdir}/libldacBT_abr.so
 %{_libdir}/libldacBT_enc.so
@@ -70,7 +71,7 @@ developing applications that use %{name}.
 %{_libdir}/pkgconfig/ldacBT-dec.pc
 
 %changelog
-* Wednesday May 16 2026 EliasOfWaffle <eliascontato@protonmail.com> - 2.0.3-1
+* Wed May 13 2026 EliasOfWaffle <eliascontato@protonmail.com> - 2.0.3-1
 - Temporary move to EliasBigMasterofBullshit/ldacBT fork
 
 * Fri Jan 16 2026 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.2.3-19
