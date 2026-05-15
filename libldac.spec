@@ -12,7 +12,7 @@ Summary:        A lossy audio codec for Bluetooth connections
 
 License:        Apache-2.0
 URL:            https://github.com/EHfive/ldacBT
-Source0:        https://github.com/EliasTheBigMasterofBullshit/ldacBT/releases/download/workflow_2/libldac-2.0.3.tar.gz
+Source0:        https://github.com/EliasTheBigMasterofBullshit/ldacBT/releases/download/workflow_3/ldacBT-2.0.3.tar.gz
 
 # Upstream source throws error in a big-endian arch, see #1677491
 ExcludeArch:    s390x
@@ -34,7 +34,7 @@ The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
 %prep
-%autosetup -n  libldac -p1
+%autosetup -n archivename -p1
 
 %build
 %cmake3 \
