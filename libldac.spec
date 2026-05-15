@@ -1,6 +1,6 @@
 # Force out of source build
 %undefine __cmake_in_source_build
-%undefine _disable_source_fetch
+%define _disable_source_fetch 0
 
 %global archivename ldacBT
 %global sonamebase 2
