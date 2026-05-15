@@ -17,8 +17,9 @@ Source0:        https://github.com/EliasTheBigMasterofBullshit/ldacBT/releases/d
 # Upstream source throws error in a big-endian arch, see #1677491
 ExcludeArch:    s390x
 
-BuildRequires:  cmake3
+BuildRequires:  cmake
 BuildRequires:  gcc
+BuildRequires:  cmake-rpm-macros
 
 %package        devel
 Summary:        Development files for %{name}
@@ -37,15 +38,15 @@ developing applications that use %{name}.
 %autosetup -n %{archivename} -p1
 
 %build
-%cmake3 \
+%cmake \
     -DLDAC_SOFT_FLOAT=OFF \
     -DINSTALL_LIBDIR=%{_libdir} \
     -DAPPLY_PATCHES=TRUE
 
-%cmake3_build
+%cmake_build
 
 %install
-%cmake3_install
+%cmake_install
 
 %ldconfig_scriptlets
 
