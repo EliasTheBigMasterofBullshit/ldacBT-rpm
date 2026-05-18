@@ -6,13 +6,13 @@
 %global sonamebase 2
 
 Name:           libldac
-Version:        %{sonamebase}.2.0.3
+Version:        %{sonamebase}.2.0.3.1
 Release:        1%{?dist}
 Summary:        A lossy audio codec for Bluetooth connections
 
 License:        Apache-2.0
 URL:            https://github.com/EHfive/ldacBT
-Source0:        https://github.com/EliasTheBigMasterofBullshit/ldacBT/releases/download/workflow_6/ldacBT-2.0.3.tar.gz
+Source0:        https://github.com/EliasTheBigMasterofBullshit/ldacBT/releases/download/workflow_8/ldacBT-2.0.3.1.tar.gz
 
 # Upstream source throws error in a big-endian arch, see #1677491
 ExcludeArch:    s390x
@@ -71,6 +71,9 @@ developing applications that use %{name}.
 %{_libdir}/pkgconfig/ldacBT-dec.pc
 
 %changelog
+* Mon May 18 2026 EliasOfWaffle <eliascontato@protonmail.com> - 2.0.3.1-1
+- Update to 2.0.3.1 release
+
 * Wed May 13 2026 EliasOfWaffle <eliascontato@protonmail.com> - 2.0.3-1
 - Temporary move to EliasBigMasterofBullshit/ldacBT fork
 
